@@ -9,16 +9,15 @@
 	</head>
 	<body>
 		<!-- 		
-		DB에서 가져온 데이터를 출력해주는 페이지로 로그인 한 사람의
+		DB에서 가져온 데이터를 출력해 주는 페이지로 로그인 한 사람의
  		아이디로 가져온 데이터여야 함. 딱 한 사람의 데이터만 가져옴!
  		마이페이지에서는 정보 수정 버튼과 회원 탈퇴 버튼 필수
  		버튼은 a 태그로 만들며 get 방식 호출! 버튼을 눌렀을 때는
  		탈퇴를 할 건지 물어보는 자바스크립트 코드 작성하기
- 		- myPage.jsp에서는 Controller에서 request에 member라는 키 값으로
+ 		- myPage.jsp에서는 Controller에서 request에 member라는 키값으로
  		member 객체를 setAttribute 해주면 $ member. 를 통해서 받아쓸 수 있음
 		- c:if에서 노란 줄이 보이면 jsp 내에서 taglib을 적지 않은 것
  		-->
-	 
  		<ul>
 			<li>
 				<label for ="">아이디</label>
@@ -58,6 +57,12 @@
 				${member.memberHobby }
 			</li>
 		</ul>
+		<!-- 
+		ModifyController에서 doGet 메소드를 사용하여 정보 수정 페이지로 이동
+		a 태그는 url을 get 방식으로 요청하기 때문에 doGet() 메소드 사용!
+		doGet() 메소드에서 디비에서 가져온 값을 member로 setAttribute하여
+		modify.jsp로 보내주어 화면에 출력되도록 함!
+		-->
 		<a href="/member/modify.do?memberId=${sessionScope.memberId }">정보수정</a>
 		<a href="javascript:void(0)" onclick = "deleteCheck();">회원탈퇴</a>
 	</body>

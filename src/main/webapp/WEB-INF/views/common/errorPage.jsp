@@ -18,7 +18,8 @@
  		talib 구문을 이용하여 core Tag를 사용할 수 있도록 함
  		-->
 		<c:if test="${msg eq null }">
-			<h2>NullPointerException 발생! Null인 곳을 찾아주세요!</h2>
+			<h2>NullPointerException 발생!</h2>
+			<h2>Null인 곳을 찾아주세요!</h2>
 		</c:if>
 		<h2>${msg }</h2>
 	</body>

@@ -33,7 +33,7 @@ public class LogoutController extends HttpServlet {
 		 * 로그아웃은 세션을 파괴! 세션은 new로 생성하는 것이 아니라 
 		 * request하는 서블릿 객체에서 getSession() 메소드로 가져오는 것
 		 * invalidate() 메소드는 세션을 파괴하며 세션에 저장된 정보도 사라지게 함
-		 * 세션이 파괴된 후 다시 로그인을 하도록 하기 위해 메인 페이지(index.jsp)로 이동
+		 * 세션이 파괴된 후 다시 로그인하도록 하기 위해 메인 페이지(index.jsp)로 이동
 		 */
 		HttpSession session = request.getSession();
 		if (session != null) {

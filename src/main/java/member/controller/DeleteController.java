@@ -17,18 +17,20 @@ import member.service.MemberService;
 @WebServlet("/member/delete.do")
 public class DeleteController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public DeleteController() {
-        super();
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public DeleteController() {
+		super();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 //		response.getWriter().append("Served at: ").append(request.getContextPath());
 		try {
 			String memberId = request.getParameter("memberId");
@@ -40,13 +42,11 @@ public class DeleteController extends HttpServlet {
 			} else {
 				// 실패
 				request.setAttribute("msg", "No Data Found");
-				request.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp")
-				.forward(request, response);
+				request.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(request, response);
 			}
 		} catch (SQLException e) {
 			request.setAttribute("msg", e.getMessage());
-			request.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp")
-			.forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/views/common/errorPage.jsp").forward(request, response);
 		}
 	}
 

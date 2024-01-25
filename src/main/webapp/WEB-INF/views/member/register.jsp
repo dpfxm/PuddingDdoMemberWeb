@@ -14,16 +14,16 @@
 				<legend>회원가입</legend>
 					<ul>
 						<li>
-						<label for ="">아이디</label>
-						<input type="text" name = "member-id" id = "member-id">
+							<label for ="">아이디</label>
+							<input type="text" name = "member-id" id = "member-id">
 						</li>
 						<li>
-						<label for ="">비밀번호</label>
-						<input type="password" name = "member-pw" id = "member-pw">
+							<label for ="">비밀번호</label>
+							<input type="password" name = "member-pw" id = "member-pw">
 						</li>
 						<li>
-						<label for ="">이름</label>
-						<input type="text" name = "member-name" id = "member-name">
+							<label for ="">이름</label>
+							<input type="text" name = "member-name" id = "member-name">
 						</li>
 						<li>
 							<label for ="">나이</label>
